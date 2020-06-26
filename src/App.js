@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
+import Header from './components/Header';
 import Table from './components/Table';
 import Form from './components/Form';
 
-import './App.css';
+import 'materialize-css/dist/css/materialize.min.css';
 
 class App extends Component {
 
@@ -52,6 +53,7 @@ class App extends Component {
   render (){
     return (
       <React.Fragment>
+        <Header />
         <Table autores={this.state.autores} removeAutor={this.removeAutor} />
         <Form handleSubmit={this.handleSubmit} />
       </React.Fragment>
