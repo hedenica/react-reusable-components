@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 import Table from './components/Table';
+import Form from './components/Form';
+
 import './App.css';
 
 class App extends Component {
@@ -30,11 +32,29 @@ class App extends Component {
     ],
   }
 
+  removeAutor = (index) => {
+
+    const { autores } = this.state;
+
+    this.setState (
+      {
+        autores : autores.filter((autor, posAtual) => {
+          return posAtual !== index;
+        }),
+      }
+    )
+  }
+
+  handleSubmit = (autor) => {
+    this.setState({autores: [...this.state.autores, autor]})
+  }
+
   render (){
     return (
-      <div className="App">
-        <Table autores={this.state.autores} />
-      </div>
+      <React.Fragment>
+        <Table autores={this.state.autores} removeAutor={this.removeAutor} />
+        <Form handleSubmit={this.handleSubmit} />
+      </React.Fragment>
     );
   }
 }
