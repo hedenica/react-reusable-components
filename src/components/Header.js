@@ -3,9 +3,9 @@ import React from 'react';
 const Header = () => {
   return (
     <nav>
-      <div class="nav-wrapper">
+      <div className="nav-wrapper indigo lighten-2">
         <a href="/">Casa do Código</a>
-        <ul class="right">
+        <ul className="right">
           <li><a href="/">Autores</a></li>
           <li><a href="/">Livros</a></li>
           <li><a href="/">Sobre</a></li>

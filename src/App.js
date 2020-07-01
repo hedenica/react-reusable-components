@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './App.css';
+
 import Header from './components/Header';
 import Table from './components/Table';
 import Form from './components/Form';
@@ -50,12 +52,14 @@ class App extends Component {
     this.setState({autores: [...this.state.autores, autor]})
   }
 
-  render (){
+  render () {
     return (
       <React.Fragment>
         <Header />
-        <Table autores={this.state.autores} removeAutor={this.removeAutor} />
-        <Form handleSubmit={this.handleSubmit} />
+        <div className="container mb-10">
+          <Table autores={this.state.autores} removeAutor={this.removeAutor} />
+          <Form handleSubmit={this.handleSubmit} />
+        </div>
       </React.Fragment>
     );
   }
