@@ -57,6 +57,7 @@ class App extends Component {
       <React.Fragment>
         <Header />
         <div className="container mb-10">
+          <h1>Casa do Código</h1>
           <Table autores={this.state.autores} removeAutor={this.removeAutor} />
           <Form handleSubmit={this.handleSubmit} />
         </div>

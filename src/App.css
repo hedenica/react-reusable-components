@@ -35,3 +35,11 @@
 .mb-10 {
   margin-bottom: 1em;
 }
+
+.header-title { 
+  font-size: 30px;
+}
+
+.center-btn {
+  width: 100%;
+}

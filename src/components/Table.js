@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import '../App.css';
+
 const TableHead = () => {
   return (
     <thead>
@@ -19,8 +21,8 @@ const TableBody = (props) => {
       <tr key={linha.nome}>
         <td>{linha.nome}</td>
         <td>{linha.livro}</td>
-        <td>{linha.preco}</td>
-        <td><button className="waves-effect waves-light btn indigo lighten-2" onClick={() => props.removeAutor(index)} >Remover</button></td>
+        <td>R${linha.preco},00</td>
+        <td><button className="center-btn waves-effect waves-light btn indigo lighten-2" onClick={() => props.removeAutor(index)} >Remover</button></td>
       </tr>
     );
   });

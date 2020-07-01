@@ -46,7 +46,7 @@ class Form extends Component {
             <label className="input-field" htmlFor="preco">Preço</label>
             <input className="validate" id="preco" type="text" name="preco" value={preco} onChange={this.handleChange} />
           </div>
-          <button className="waves-effect waves-light btn indigo lighten-2" type="button" onClick={this.submitForm} >Salvar</button>
+          <button className="center-btn waves-effect waves-light btn indigo lighten-2" type="button" onClick={this.submitForm} >Salvar</button>
         </div>
       </form>
     )
